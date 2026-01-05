@@ -18,7 +18,7 @@ The system maintains student data in sorted order by roll number and uses binary
 ## ⚙️ Features
 - Add student records
 - Display all student records
-- Search student result using Binary Search
+- Search student results using Binary Search
 - Automatic grade calculation
 - Efficient searching for large datasets
 
@@ -36,4 +36,4 @@ The system maintains student data in sorted order by roll number and uses binary
 ## ▶️ How to Run the Project
 1. Clone the repository
    ```bash
-   git clone https://github.com/your-username/Student-Result-Finder-System.git
+   git clone https://github.com/DevOwais-ai/Student-Result-Finder-System.git
