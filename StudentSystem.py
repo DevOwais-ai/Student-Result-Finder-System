@@ -13,11 +13,11 @@ class StudentSystem:
             return 'Fail'
         
     def add_student(self):
-        roll_no = input("Enter Roll Number: ")
+        roll_no = int(input("Enter Roll Number: "))
         name = input("Enter Name:")
         marks = int(input("Enter Marks: "))
 
-        self.students.append({roll_no, name, marks})
+        self.students.append((roll_no, name, marks))
         self.students.sort(key=lambda x: x[0])  # Sort by roll number
         
         print("Student record added successfully.\n")
@@ -54,17 +54,17 @@ class StudentSystem:
             print("No student records available.\n")
             return
         
-        roll = int(input("Enter Roll Number to Search:"))
+        roll = int(input("Enter Roll Number to Search: "))
         result = self.binary_search(roll)
 
-        if result:
+        if result is not None:
             grade = self.calculate_grade(self.students[result][2])
             print("\nStudent Found:")
-            print("\n--------------------------------")
+            print("--------------------------------")
             print(f"Roll No: {self.students[result][0]}")
             print(f"Name: {self.students[result][1]}")
             print(f"Marks: {self.students[result][2]}")
-            print(f"Grade: {grade}")
+            print(f"Grade: {grade}\n")
         else:
             print("Student record not found.\n")
 
